@@ -20,12 +20,13 @@
     "node": true
   },
   "rules": {
+    "react/forbid-prop-types": 0,
     "prettier/prettier": [
       "error",
       {
         "trailingComma": "es5",
         "singleQuote": true,
-        "semi": false
+        "semi": true
       }
     ]
   }

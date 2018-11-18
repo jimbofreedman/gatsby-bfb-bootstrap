@@ -1,11 +1,12 @@
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
-import React from 'react'
+import { graphql } from 'gatsby';
+import get from 'lodash/get';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Post from 'templates/Post'
-import Meta from 'components/Meta'
-import Layout from 'components/Layout'
-import Page from 'templates/Page'
+import Post from './Post';
+import Page from './Page';
+import Meta from '../components/Meta';
+import Layout from '../components/Layout';
 
 const Template = ({ data, location }) => (
   <div>
@@ -14,7 +15,7 @@ const Template = ({ data, location }) => (
         title={get(data, 'post.frontmatter.title')}
         site={get(data, 'site.meta')}
       />
-      {get(data, 'post.frontmatter.layout') != 'page' ? (
+      {get(data, 'post.frontmatter.layout') !== 'page' ? (
         <Post
           data={get(data, 'post')}
           options={{
@@ -23,12 +24,18 @@ const Template = ({ data, location }) => (
           }}
         />
       ) : (
-        <Page {...this.props} />
+        <Page data={data} location={location} />
       )}
     </Layout>
   </div>
-)
-export default Template
+);
+
+Template.propTypes = {
+  data: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+};
+
+export default Template;
 
 export const pageQuery = graphql`
   query PostByPath($path: String!) {
@@ -63,4 +70,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

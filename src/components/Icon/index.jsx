@@ -1,6 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   faApple,
@@ -14,8 +15,8 @@ import {
   faReact,
   faTwitter,
   faVuejs,
-} from '@fortawesome/free-brands-svg-icons'
-import './style.scss'
+} from '@fortawesome/free-brands-svg-icons';
+import './style.scss';
 
 library.add(
   faApple,
@@ -29,12 +30,16 @@ library.add(
   faReact,
   faTwitter,
   faVuejs
-)
+);
 
 const Icon = ({ name }) => (
   <div className="icon" title={name}>
     <FontAwesomeIcon icon={['fab', name]} />
   </div>
-)
+);
 
-export default Icon
+Icon.propTypes = {
+  name: PropTypes.string.isRequired,
+};
+
+export default Icon;

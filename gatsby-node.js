@@ -1,7 +1,8 @@
 const each = require('lodash/each')
 const Promise = require('bluebird')
 const path = require('path')
-const PostTemplate = path.resolve('./src/templates/index.js')
+
+const PostTemplate = path.resolve('./src/templates/index.jsx')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -40,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
         const posts = items.filter(({ node }) => /posts/.test(node.name))
         each(posts, ({ node }) => {
           if (!node.remark) return
-          const { path } = node.remark.frontmatter
+          const { path } = node.remark.frontmatter // eslint-disable-line no-shadow
           createPage({
             path,
             component: PostTemplate,
