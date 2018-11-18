@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
+    title: 'BfbStrap',
+    description: 'Gatsby starter for BfB microsites',
+    siteUrl: 'https://www.github.com/jimbofreedman/gatsby-bfb-bootstrap',
+    author: 'jimbofreedman',
+    twitter: 'jimbofreedman',
     adsense: '',
   },
   pathPrefix: '/',
@@ -50,10 +50,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
+        name: 'BfbStrap',
+        short_name: 'Gatsby starter for BfB microsites',
         description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
+        homepage_url:
+          'https://www.github.com/jimbofreedman/gatsby-bfb-bootstrap',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
@@ -76,6 +77,8 @@ module.exports = {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: '',
+        anonymize: true,
+        respectDNT: true,
       },
     },
     {
