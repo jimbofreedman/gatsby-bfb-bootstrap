@@ -32,7 +32,7 @@ const HTML = ({ headComponents, body, postBodyComponents }) => (
 
 HTML.propTypes = {
   headComponents: PropTypes.array.isRequired,
-  body: PropTypes.array.isRequired,
+  body: PropTypes.string.isRequired,
   postBodyComponents: PropTypes.array.isRequired,
 };
 
