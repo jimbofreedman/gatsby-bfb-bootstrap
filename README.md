@@ -1,38 +1,28 @@
-# Gatstrap
+# Microsite template
 
-[![Build Status](https://travis-ci.org/jaxx2104/gatsby-starter-bootstrap.svg?branch=master)](https://travis-ci.org/jaxx2104/gatsby-starter-bootstrap)
-[![dependency Status](https://img.shields.io/david/jaxx2104/gatsby-starter-bootstrap.svg?style=flat-square)](https://david-dm.org/jaxx2104/gatsby-starter-bootstrap#info=dependencies)
+## To start developing
 
-Gatsby starter for bootstrap a blog
+```
+yarn install -g gatsby
+git@github.com:jimbofreedman/gatsby-bfb-bootstrap.git
+cd gatsby-bfb-bootstrap
+yarn install
+gatsby develop
+```
 
-![thumb](https://user-images.githubusercontent.com/2681007/42584980-656c9406-856f-11e8-882f-cafa9d89b395.png)
+## To set up deployment
 
-## GatsbyJS v2, v1, v0
+```
+yarn install -g amplify
+amplify init # You'll need to set up an AWS profile with IAM key/secret
+amplify configure
+amplify add hosting
+```
 
-- For v2 version of this starter, check out the [master branch](https://github.com/jaxx2104/gatsby-starter-bootstrap).
-- For v1 version, check out the [v1 branch](https://github.com/jaxx2104/gatsby-starter-bootstrap/tree/v1).
-- For v0 version, check out the [v0 branch](https://github.com/jaxx2104/gatsby-starter-bootstrap/tree/v0).
-- Make sure to read the [migration guide](https://next.gatsbyjs.org/docs/migrating-from-v1-to-v2/) when porting v1 projects to v2.
+## To publish
 
-## Features
+```
+amplify publish
+```
 
-- Single column layout
-- Simple components: Post, Page, Navi, Footer etc.
-- [Twitter Bootstrap 4](https://github.com/twbs/bootstrap) css framework.
-- Custom theme color.
-
-## Installation
-
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatstrap https://github.com/jaxx2104/gatsby-starter-bootstrap`
-
-## Usage
-
-develop
-`gatsby develop`
-
-### Custom Theme
-
-`/src/layouts/gatstrap.css`
-
-![1f466b07-5506-4c8d-8d17-8d02b42d6d0d](https://user-images.githubusercontent.com/2681007/43086458-5092d0be-8ed8-11e8-8125-8b336fdd3b43.gif)
+Amplify will tell you where to look

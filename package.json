@@ -1,7 +1,7 @@
 {
   "name": "gatsby-bfb-bootstrap",
   "description": "Simple starter for Gatsby minisites",
-  "version": "1.0.0.",
+  "version": "1.0.0",
   "author": "Jimbo Freedman @jimbofreedman",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
