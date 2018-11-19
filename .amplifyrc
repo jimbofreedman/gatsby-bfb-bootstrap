@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "gatsbybfbbootstrap-20181119153106-authRole",
+            "UnauthRoleArn": "arn:aws:iam::233747919055:role/gatsbybfbbootstrap-20181119153106-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::233747919055:role/gatsbybfbbootstrap-20181119153106-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "gatsbybfbbootstrap-20181119153106-deployment",
+            "UnauthRoleName": "gatsbybfbbootstrap-20181119153106-unauthRole",
+            "StackName": "gatsbybfbbootstrap-20181119153106",
+            "StackId": "arn:aws:cloudformation:eu-west-1:233747919055:stack/gatsbybfbbootstrap-20181119153106/21d2b8d0-ec10-11e8-96a1-500c423e34d2"
+        }
+    }
+}
