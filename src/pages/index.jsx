@@ -7,11 +7,11 @@ import Post from '../templates/Post';
 import Meta from '../components/Meta';
 import Layout from '../components/Layout';
 
-const BlogIndex = ({ data, location }) => {
+const Index = ({ data, location }) => {
   const posts = get(data, 'remark.posts');
   return (
     <Layout location={location}>
-      <Meta site={get(data, 'site.meta')} />
+      <Meta />
       {posts.map(({ post }, i) => (
         <Post
           data={post}
@@ -25,25 +25,15 @@ const BlogIndex = ({ data, location }) => {
   );
 };
 
-BlogIndex.propTypes = {
+Index.propTypes = {
   data: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
 };
 
-export default BlogIndex;
+export default Index;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    site {
-      meta: siteMetadata {
-        title
-        description
-        url: siteUrl
-        author
-        twitter
-        adsense
-      }
-    }
     remark: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
     ) {

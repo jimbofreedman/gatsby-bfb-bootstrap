@@ -17,7 +17,7 @@ const Profile = ({ location, data }) => {
 
   return (
     <Layout location={location}>
-      <Meta site={siteMetadata} title="Profile" />
+      <Meta title="Profile" />
       <div>
         <section className="text-center">
           <div className="container">
